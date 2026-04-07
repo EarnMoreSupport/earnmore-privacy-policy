@@ -1,1 +1,1 @@
-# earnmore-privacy
+# earnmore-privacy-policy
