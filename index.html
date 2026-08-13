@@ -62,6 +62,20 @@
       margin-bottom: 6px;
     }
     a { color: #00d4aa; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 16px;
+      font-size: 13px;
+    }
+    th, td {
+      border: 1px solid #e4e4e4;
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+      color: #444;
+    }
+    th { background: #fafafa; color: #111; font-weight: bold; }
     .footer {
       margin-top: 48px;
       font-size: 12px;
@@ -74,66 +88,113 @@
   <div class="container">
     <div class="logo">EarnMore</div>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: April 7, 2026</p>
+    <p class="updated">Last updated: August 11, 2026</p>
 
     <h2>1. Introduction</h2>
-    <p>EarnMore ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy describes how we handle information in connection with the EarnMore browser extension. By using EarnMore, you agree to the practices described in this policy.</p>
+    <p>EarnMore ("we," "our," or "us") builds a browser extension and companion apps that tell you which of your credit cards earns the most at checkout. This Privacy Policy explains what data we collect, how we use it, where it is stored, who it is shared with, and how you can delete it.</p>
+    <p>It covers the EarnMore browser extension for Chrome, Edge, Firefox and Safari, and the EarnMore apps for iPhone, iPad and Mac.</p>
 
-    <h2>2. Information We Do Not Collect</h2>
-    <p>We are committed to collecting only what is necessary to provide our service. EarnMore does not collect:</p>
+    <h2>2. What We Never Collect</h2>
     <ul>
-      <li>Credit card numbers, expiration dates, security codes, or any financial account credentials</li>
-      <li>Your name, email address, phone number, or any personally identifiable information</li>
-      <li>Browsing history outside of checkout and order confirmation pages</li>
-      <li>Any information from pages where the extension is not active</li>
+      <li><strong>Credit card numbers, expiration dates, CVV codes, or any card credentials.</strong> EarnMore works from the card's <em>name</em> only (for example, "Amex Gold"). We never see, request, or store your actual card details.</li>
+      <li><strong>Bank or card issuer login credentials.</strong> We never connect to your bank and have no access to your accounts, balances, or statements.</li>
+      <li><strong>Your general browsing history.</strong> The extension reads the page only to detect a checkout or order-confirmation page and identify the merchant. Pages that are not checkouts are not recorded or transmitted.</li>
+      <li><strong>Your name, phone number, or postal address.</strong></li>
     </ul>
 
-    <h2>3. Information We Collect</h2>
-    <h3>Locally Stored Data</h3>
-    <p>To provide personalized card recommendations, EarnMore stores the following on your device:</p>
-    <ul>
-      <li>The names of credit cards you add to your wallet within the extension</li>
-      <li>Your rewards history, including purchase domains, order totals, and points earned or missed</li>
-    </ul>
-    <p>This data is synced across your devices using Chrome's built-in sync infrastructure, governed by Google's Privacy Policy.</p>
+    <h2>3. What We Collect</h2>
 
-    <h3>Anonymous Usage Data</h3>
-    <p>To improve the accuracy of our recommendations and understand how the extension is used, we collect anonymous usage events including:</p>
+    <h3>3.1 Data stored on your device</h3>
+    <p>This is the core of the product and never leaves your device except to sync between your own devices:</p>
+    <ul>
+      <li>The names of the cards in your wallet, and any bonus categories you have selected for them</li>
+      <li>Your transaction and rewards history — merchant domain, purchase category, order total, and points earned or missed</li>
+      <li>Spending-cap progress, bonus-offer tracking, and prioritized-card settings</li>
+      <li>A randomly generated device identifier and an anonymous user identifier, created at installation</li>
+    </ul>
+    <p>On Chrome, Edge and Firefox this is stored in the browser's extension storage and synced by the browser's own sync service, under that browser vendor's privacy policy. On Apple devices it is stored locally and synced between your devices through your private iCloud account, which we cannot read.</p>
+
+    <h3>3.2 Anonymous usage data</h3>
+    <p>To measure whether recommendations are accurate and to improve our rewards database, we send the following to our servers:</p>
     <ul>
       <li>Purchase category and merchant domain</li>
-      <li>Which card was recommended and whether it was used</li>
-      <li>Banner interaction events (e.g., whether a recommendation was acknowledged)</li>
-      <li>An anonymous, randomly generated identifier created at installation</li>
+      <li>Order total, and the points earned versus the points that were available</li>
+      <li>Which card was recommended, and whether you confirmed using it</li>
+      <li>Whether the recommendation banner was shown, dismissed, or acted on</li>
+      <li>Your anonymous device and user identifiers, the platform (for example "Chrome" or "Safari iOS"), and how many cards are in your wallet</li>
     </ul>
-    <p>This identifier is not linked to your name, email, or any other personal information and cannot be used to identify you.</p>
+    <p>If you never create an account, these identifiers are random values that are not connected to your name, email, or any real-world identity.</p>
 
-    <h2>4. How We Use Your Information</h2>
-    <p>We use the information described above solely to:</p>
+    <h3>3.3 Account data — only if you choose to sign in</h3>
+    <p><strong>An account is entirely optional.</strong> Every recommendation feature, and a purchased EarnMore Plus subscription on an Apple device, works without one. You would create an account only to use a subscription across different browsers.</p>
+    <p>If you do sign in, we collect and store:</p>
     <ul>
-      <li>Deliver accurate, personalized credit card recommendations at checkout</li>
-      <li>Track your confirmed and potential rewards over time</li>
-      <li>Improve the quality and coverage of our recommendation engine</li>
+      <li><strong>Your email address.</strong> We use passwordless sign-in, so we send a one-time link to your address. We do not store a password because we never create one.</li>
+      <li><strong>An account identifier</strong> generated by our authentication provider</li>
+      <li><strong>The platform you signed in from</strong> (for example "Chrome" or "Safari iOS"), so a subscription bought on one device can be recognized in another browser</li>
     </ul>
-    <p>We do not use your information for advertising, profiling, or any purpose beyond operating and improving the EarnMore service.</p>
+    <p>Once you sign in, the anonymous identifiers in section 3.2 become associated with your account. Before you sign in, they are not.</p>
 
-    <h2>5. Data Sharing</h2>
-    <p>EarnMore does not sell your data. No data is shared with third parties for advertising purposes. Anonymous usage data is transmitted to secured servers to support the operation and improvement of the extension.</p>
+    <h3>3.4 Subscription data</h3>
+    <p>If you subscribe to EarnMore Plus we store your account identifier, which payment processor was used, the subscription status, and the current billing period end date.</p>
+    <p><strong>We never receive or store your payment details.</strong> Payments are handled entirely by Apple (for purchases made in the iPhone, iPad or Mac app) or by Stripe (for purchases made on the web). Card numbers go to those processors, not to us.</p>
 
-    <h2>6. Data Retention and Deletion</h2>
-    <p>Locally stored data, including your card names and rewards history, can be deleted at any time directly from the Settings tab within the EarnMore extension. Anonymous usage data contains no personal information and cannot be linked back to you.</p>
+    <h3>3.5 Location — Apple apps only, and only when you ask</h3>
+    <p>The iPhone app includes an optional "Best Card Radar" feature that finds nearby stores so it can tell you the best card for that specific merchant. It requests your location only at the moment you tap that button, sends the coordinates to a mapping provider to look up nearby businesses, and does not store them. This feature does not exist in the browser extension, and location is never collected in the background.</p>
 
-    <h2>7. Security</h2>
-    <p>We take reasonable measures to protect the data associated with your use of EarnMore. All data transmissions are made over encrypted connections.</p>
+    <h2>4. How We Use This Data</h2>
+    <ul>
+      <li>To recommend the best card for the merchant you are checking out with</li>
+      <li>To track your confirmed and potential rewards over time</li>
+      <li>To improve the accuracy and coverage of our rewards database</li>
+      <li>To recognize a valid subscription and unlock paid features</li>
+      <li>To send transactional email — sign-in links and account notices only</li>
+    </ul>
+    <p>We do not use your data for advertising, ad targeting, or profiling, and we do not build or sell audience segments.</p>
 
-    <h2>8. Children's Privacy</h2>
-    <p>EarnMore is not directed at children under the age of 13 and we do not knowingly collect any information from children.</p>
+    <h2>5. Where Your Data Is Stored</h2>
+    <p>Data described in section 3.1 is stored on your own device and synced by your browser vendor or by Apple iCloud, depending on platform.</p>
+    <p>Data described in sections 3.2 to 3.4 is stored in a managed PostgreSQL database hosted by Supabase, our infrastructure provider. All transmission uses encrypted HTTPS connections. Access to the database is restricted to the EarnMore operator, and per-row security rules prevent any signed-in user from reading another user's records.</p>
 
-    <h2>9. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for legal and operational reasons. We encourage you to review this page periodically. Your continued use of EarnMore following any changes constitutes your acceptance of the updated policy.</p>
+    <h2>6. Who We Share Data With</h2>
+    <p><strong>We do not sell your data. We do not share it with advertisers, data brokers, or any third party for their own marketing.</strong></p>
+    <p>We share the minimum necessary with the service providers that operate EarnMore. Each processes data only on our instructions:</p>
+    <table>
+      <tr><th>Provider</th><th>Purpose</th><th>Data it receives</th></tr>
+      <tr><td>Supabase</td><td>Database, authentication, server functions</td><td>All server-stored data in sections 3.2&ndash;3.4</td></tr>
+      <tr><td>Stripe</td><td>Payment processing for web subscriptions</td><td>Your email and payment details, which you provide to Stripe directly</td></tr>
+    </table>
+    <p>Two other disclosures belong here for completeness. Purchases made in the iPhone, iPad or Mac apps are processed by <strong>Apple</strong>, and data synced between your Apple devices passes through your own private iCloud account, which we cannot read. Sign-in emails are delivered by our email provider, which receives only your email address and the contents of that message.</p>
+    <p>We may also disclose data if required by law, or to protect the rights, safety, or security of our users and our service.</p>
 
-    <h2>10. Contact Us</h2>
-    <p>If you have any questions about this Privacy Policy, please contact us at:<br>
-    <a href="mailto:EarnMoreSupport@gmail.com">EarnMoreSupport@gmail.com</a></p>
+    <h2>7. How Long We Keep It</h2>
+    <ul>
+      <li><strong>On-device data</strong> is kept until you delete it or uninstall the extension or app.</li>
+      <li><strong>Anonymous usage data</strong> is retained while it remains useful for improving the rewards database. It contains no name or email, and for users who never sign in it cannot be traced to a person.</li>
+      <li><strong>Account and subscription data</strong> is retained while your account exists, and deleted when you delete it. Records we must keep for tax or accounting purposes are retained as required by law.</li>
+      <li><strong>Sign-in attempts that are never completed</strong> are deleted automatically within 24 hours.</li>
+    </ul>
+
+    <h2>8. Deleting Your Data</h2>
+    <ul>
+      <li><strong>On-device data:</strong> the extension's and app's Settings screens can clear your history, your cards, or all data, at any time, without contacting us.</li>
+      <li><strong>Your account and all associated data:</strong> email us at the address below and we will delete it. We will confirm once it is done.</li>
+      <li><strong>Uninstalling</strong> removes the extension's local storage. It does not by itself delete server-side account data — use the option above for that.</li>
+    </ul>
+    <p>Depending on where you live, you may have additional rights to access, correct, export, or delete your personal data, and to object to its processing. Contact us and we will honor any such request.</p>
+
+    <h2>9. Security</h2>
+    <p>All data in transit uses encrypted HTTPS. Sign-in sessions are stored in your operating system's secure credential store. Server access is protected by per-row security rules enforced by the database itself, not merely by application code. No system is perfectly secure, but we limit risk by collecting as little as possible in the first place — most notably, by never handling card numbers or bank credentials at all.</p>
+
+    <h2>10. Children's Privacy</h2>
+    <p>EarnMore is not directed at children under 13, and we do not knowingly collect data from them. If you believe a child has provided us with personal data, contact us and we will delete it.</p>
+
+    <h2>11. Changes to This Policy</h2>
+    <p>We may update this policy as the product changes. The "last updated" date above always reflects the current version. Material changes to what we collect or who we share it with will be reflected here before those changes take effect.</p>
+
+    <h2>12. Contact Us</h2>
+    <p>Questions, data requests, or account deletion:<br>
+    <a href="mailto:support@letsearnmore.com">support@letsearnmore.com</a></p>
 
     <div class="footer">EarnMore &copy; 2026</div>
   </div>
